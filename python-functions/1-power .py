@@ -1,6 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def pow(a, b):
-    while b != 0:
-        a = a * a
-        b = b - 1
-    return a
+     
+     return a ^ b
+
+print(pow(2, 2))
+print(pow(98, 2))
+print(pow(98, 0))
+print(pow(100, -2))
+print(pow(-4, 5))
