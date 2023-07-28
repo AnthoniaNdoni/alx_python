@@ -5,7 +5,7 @@ def convert_to_celsius(fahrenheit):
 
 temperature_fahrenheit = 68
 temperature_celsius = convert_to_celsius(temperature_fahrenheit)
-print(f"{temperature_fahrenheit}°F is equal to {temperature_celsius:.2f}°C")
+print(temperature_celsius)
 
 print(convert_to_celsius(100))
 print(convert_to_celsius(-40))
