@@ -6,6 +6,6 @@ def pow(a, b):
         mul = 1
         for _ in range(b):
             mul = mul * a
-        return result
+        return mul
     else:
         return 1 / pow(a, -b)
