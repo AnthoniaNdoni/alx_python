@@ -5,6 +5,6 @@ def fibonacci_sequence(n):
         sequence = []
     if n == 1:
         sequence = [0]
-    while Len(sequence)<n:
+    while len(sequence)<n:
         adder = sequence[-1] + sequence[-2]
         return sequence
