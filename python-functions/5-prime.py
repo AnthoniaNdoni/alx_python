@@ -9,3 +9,6 @@ def is_prime(number):
 
 result = is_prime(17)
 print(result)
+
+result = is_prime(4)
+print(result)
