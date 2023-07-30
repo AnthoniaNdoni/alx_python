@@ -2,6 +2,7 @@
 def is_prime(number):
     if number <= 1:
         return False
+    
     if number == 2:
         return True
     
@@ -10,9 +11,8 @@ def is_prime(number):
             return False
         
     return True
-if __name__ == "__main__":
     result = is_prime(17)
-print(result)
+    print(result)
 
-result = is_prime(4)
-print(result)
+    result = is_prime(4)
+    print(result)
