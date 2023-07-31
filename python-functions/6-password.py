@@ -10,15 +10,15 @@ def validate_password(password):
     for char in password:
         if char.isupper():
             has_uppercase = True
-         elif char.islower():
+        elif char.islower():
             has_lowercase = True
-         elif char.isdigit():
+        elif char.isdigit():
             has_digit = True
 
-       if not (has_uppercase and has_uppercase and has_digit):        
-        return False
+        if not (has_uppercase and has_uppercase and has_digit):        
+         return False
     if ' ' in password:
-        return False
+         return False
     
     return True
 
