@@ -15,7 +15,7 @@ def validate_password(password):
         elif char.isdigit():
             has_digit = True
 
-        if not (has_uppercase and has_uppercase and has_digit):        
+    if not (has_uppercase and has_uppercase and has_digit):        
          return False
     if ' ' in password:
          return False
