@@ -24,3 +24,9 @@ def validate_password(password):
 
 result = validate_password("Abcdefg123")
 print(result)
+
+result = validate_password("password123")
+print(result)
+
+result = validate_password("Password with space")
+print(result) 
