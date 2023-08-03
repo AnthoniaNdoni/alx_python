@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+a = 89
 a = -100
 from variable_load_2 import a
 
