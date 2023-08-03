@@ -2,15 +2,13 @@
 def safe_print_division(a, b):
     try:
         result = a / b
+        return result
     except ZeroDivisionError:
-        print("cannot divide by zero.")
-        return None
-    else:
-        print("insiden result: {}".format(result))
-        print("{} / {} = {}".format(a, b, result))
+        result = "None"
         return result
     finally:
-        print()
+        print("insiden result: {}".format(result))
+        
 
 # test the function
 result = safe_print_division(10, 2)   
