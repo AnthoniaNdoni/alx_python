@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-a = 42
+a = 89
 from variable_load_2 import a
 
 if __name__ == "__main__":
