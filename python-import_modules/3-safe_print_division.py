@@ -11,5 +11,3 @@ def safe_print_division(a, b):
         return result
     finally:
         print()
-
-result = safe_print_division(10, 2)
