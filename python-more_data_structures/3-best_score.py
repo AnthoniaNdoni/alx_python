@@ -4,7 +4,6 @@ def best_score(a_dictionary):
         return None
     
     max_key = max(a_dictionary,key=a_dictionary.get)
-    print("Best score: {}".format(None))
     return max_key
 
 
