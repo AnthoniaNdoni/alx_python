@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+  """  
+        Represents a square with a given size
+         Attributes: 
+             __size (int): The size of square.
+        
+        Methods: 
+             __init__(salf, size)
+      """
 class Square: 
       """  
         Represents a square with a given size
