@@ -3,8 +3,8 @@ class Square:
     def __init__(self, size):
         self.__size = size
 
-square1 = Square(5)
-square2 = Square(7)
+square1 = Square('0-square')
+square2 = Square(3)
 
-print(square1._Square__size)
-print(square2._Square__size)
+print(type(square1))
+print(square2.__dict__)
