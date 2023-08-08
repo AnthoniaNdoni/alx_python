@@ -7,6 +7,6 @@ def best_score(a_dictionary):
     return max_key
 
 
-a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'David': 16, 'Adam': 10}
+a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'John': 16, 'Adam': 10}
 result = best_score(a_dictionary)
-print("Best score:", result)
+print("Best:", result)
