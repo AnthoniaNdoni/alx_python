@@ -1,6 +1,34 @@
 #!/usr/bin/python3
+"""
+Module Documentation - Square Class
+
+This module contains the definition of the Square class.
+"""
+
 class Square:
+    """
+    Represents a square with a given size.
+    
+    Attributes:
+        __size (int): The size of the square.
+        
+    Methods:
+        __init__(self, size)
+        size(self)
+        size(self, value)
+        area(self)
+    """
+
     def __init__(self, size=0):
+        """
+        Initializes a new Square instance with the specified size.
+
+        Args:
+            size (int): The size of the square.
+
+        Returns:
+            None
+        """
         self.size = size
 
     @property
@@ -18,5 +46,10 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Calculate and return the area of the square."""
+        """
+        Calculate and return the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
         return self.__size ** 2
