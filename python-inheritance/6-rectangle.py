@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
     def __init__(self, width, height):
+    Defines a class Rectangle that inherits from BaseGeometry
     Initializes a new Rectangle instance with the specified width and height.
 
     Args:
     width (int): The width of the rectangle.
     height (int): The height of the rectangle.
-    Defines a class Rectangle that inherits from BaseGeometry
     """
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -14,6 +14,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
     """
     Represents a rectangle, inheriting from BaseGeometry
+    
     """
 def __init__(self, width, height):
     """
