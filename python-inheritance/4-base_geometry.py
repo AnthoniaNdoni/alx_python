@@ -21,7 +21,6 @@ def area(self):
     Args:
     self: The object itself.
 
-    Returns:
-    None (Raises an Exception).
+    Returns:None (Raises an Exception).
     """
     raise Exception("area() is not implemented")
