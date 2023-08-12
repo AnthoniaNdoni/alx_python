@@ -5,6 +5,9 @@ module documentation:
 class Base:
     """
     Base class for managing the id attribute in all future classes.
+    Attributes:
+        __nb_object (int): A private class attribute that keeps track of the number of instances created.
+        id (int): A public instance attribute representing the unique identifier of an instance.
     """
     __nb_object = 0
 
