@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 module documentation: 
 """
@@ -9,7 +10,7 @@ class Base:
         __nb_object (int): A private class attribute that keeps track of the number of instances created.
         id (int): A public instance attribute representing the unique identifier of an instance.
     """
-    __nb_object = 0
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """
