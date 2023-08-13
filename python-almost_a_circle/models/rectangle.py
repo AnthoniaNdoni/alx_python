@@ -2,7 +2,7 @@
 """
 module documentation
 """
-   
+from base import Base
 class Base: 
     """
     class documentation
