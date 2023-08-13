@@ -2,7 +2,7 @@
 """
 module documentation
 """
-from base import Base
+from models.base import Base
     
 class Rectangle(Base): 
     """
@@ -138,12 +138,53 @@ class Rectangle(Base):
             """
             Display the rectangle using the '#' character.
             """
-            for row in range(self.height):
-                for column in range(self.width):
-                    print("#",end="")
+            for row in range(self.y):
+                print()
+            else:
+                for row in range(self.height):
+                    for column in range(self.width):
+                        print(" ",end="")
                 else:
-                    print()  
+                    for column in range(self.width):
+                        print("#", end="")
+                    else:    
+                        print()  
 
         def __str__(self):
+            """
+            str update
+            """
             return "[Rectangle]({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        
+        def update(self, *args, **kwargs):
+            """
+            update attributes
+            """
 
+            args_length = len(args)
+            kwargs_length = len(kwargs)
+
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id= value
+                elif key == "width":
+                 self.width = value
+                elif key == "height": 
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value  
+                      
+                     
+
+            if args_length > 0:
+                self.id = args[0]
+            if args_length > 1:
+                self.width = args[1]
+            if args_length > 2:
+                self.height = args[2]
+            if args_length > 3:
+                self.x = args[3]
+            if args_length > 4:
+                self.y  = args[4]                    
