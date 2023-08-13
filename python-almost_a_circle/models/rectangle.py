@@ -2,26 +2,8 @@
 """
 module documentation
 """
-from base import Base
-class Base: 
-    """
-    class documentation
-    """
+from models.base import Base
     
-    __nb_objects = 0
-
-def __init__(self, id=None):
-        """
-        class constructor.
-        Args:
-        id (int, optional): The id for the instance.Defaults to None.
-        """
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects 
-
 class Rectangle(Base): 
     """
      Rectangle class that inherits from the Base class.
