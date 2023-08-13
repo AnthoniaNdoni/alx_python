@@ -2,8 +2,25 @@
 """
 module documentation
 """
+   
+class Base: 
+    """
+    class documentation
+    """
+    
+    __nb_objects = 0
 
-from models.base import Base 
+def __init__(self, id=None):
+        """
+        class constructor.
+        Args:
+        id (int, optional): The id for the instance.Defaults to None.
+        """
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects 
 
 class Rectangle(Base): 
     """
@@ -128,8 +145,23 @@ class Rectangle(Base):
                 raise ValueError("y must be >= 0")
             else: 
                 self.__y = value
+
         def area(self):
             """
             calculate and return the area of the rectangle
             """ 
-            return self.width * self.height   
+            return self.width * self.height 
+
+        def display(self):
+            """
+            Display the rectangle using the '#' character.
+            """
+            for row in range(self.height):
+                for column in range(self.width):
+                    print("#",end="")
+                else:
+                    print()  
+
+        def __str__(self):
+            return "[Rectangle]({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
