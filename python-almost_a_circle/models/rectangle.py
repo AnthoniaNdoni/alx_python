@@ -8,6 +8,12 @@ from models.base import Base
 class Rectangle(Base): 
     """
      Rectangle class that inherits from the Base class.
+     Attributes:
+        width (int): The width of the rectangle.
+        height (int): The height of the rectangle.
+        x (int): The x-coordinate of the rectangle.
+        y (int): The y-coordinate of the rectangle.
+        id (int): The unique identifier of the instance.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -31,7 +37,7 @@ class Rectangle(Base):
         if type(height) is not int:
             raise TypeError("height must be an integer")
         elif height <= 0:
-            raise ValueError("height must be > 0")
+             raise ValueError("height must be > 0")
         else:    
             self.__height = height
         if type(x) is not int:
@@ -74,7 +80,7 @@ class Rectangle(Base):
             return self.__height
 
         @height.setter
-        def height(self, value):
+        def height(self,  value):
             """
             Set the height of the rectangle.
             """
@@ -121,4 +127,9 @@ class Rectangle(Base):
             elif value < 0:
                 raise ValueError("y must be >= 0")
             else: 
-                self.__y = value    
+                self.__y = value
+        def area(self):
+            """
+            calculate and return the area of the rectangle
+            """ 
+            return self.width * self.height   
