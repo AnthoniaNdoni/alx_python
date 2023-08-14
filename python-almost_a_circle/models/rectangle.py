@@ -3,9 +3,22 @@
 module documentation
 """
 class Base:
+    """
+    This class will serve as the base for managing the id attribute in all future classes.
+
+    Attributes:
+        __nb_objects (int): A private class attribute to keep track of the number of instances created.
+        id (int): A public instance attribute representing the unique identifier of an instance.
+    """
     __nb_objects = 0
 
 def __init__(self, id=None):
+    """
+     Class constructor.
+
+        Args:
+            id (int, optional): The id for the instance. Defaults to None.
+    """
     if id is not None:
         self.id = id
     else:
