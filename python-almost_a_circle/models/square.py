@@ -1,5 +1,7 @@
-
-from models.rectangle import Rectangle
+"""
+module documentation
+"""
+from models.rectangle import Rectangle 
 
 class Square(Rectangle):
     """
