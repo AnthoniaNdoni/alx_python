@@ -2,7 +2,8 @@
 """
 module documentation
 """
-from base import Base
+
+from models.base import Base
 
 class Rectangle(Base): 
     """
@@ -18,11 +19,12 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Class constructor.
-     ... (rest of the __init__ method) ...
-
-    ... (other methods) ...
-
-    def display(self):
+     Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle. Defaults to 0.
+            y (int, optional): The y-coordinate of the rectangle. Defaults to 0.
+            id (int, optional): The id for the instance. Defaults to None
         """
         super().__init__(id)
         if type(width) is not int:
