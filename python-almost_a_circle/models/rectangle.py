@@ -25,7 +25,7 @@ def __init__(self, id=None):
         Base.__nb_objects += 1
         self.id = Base.__nb_objects    
     
-class Rectangle: 
+class Rectangle(Base): # Inherit from Base
     """
      Rectangle class that inherits from the Base class.
      Attributes:
@@ -39,13 +39,11 @@ class Rectangle:
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Class constructor.
+     ... (rest of the __init__ method) ...
 
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle. Defaults to 0.
-            y (int, optional): The y-coordinate of the rectangle. Defaults to 0.
-            id (int, optional): The id for the instance. Defaults to None.
+    ... (other methods) ...
+
+    def display(self):
         """
         super().__init__(id)
         if type(width) is not int:
