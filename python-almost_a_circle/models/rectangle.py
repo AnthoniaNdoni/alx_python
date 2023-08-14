@@ -25,7 +25,7 @@ def __init__(self, id=None):
         Base.__nb_objects += 1
         self.id = Base.__nb_objects    
     
-class Rectangle(Base): 
+class Rectangle: 
     """
      Rectangle class that inherits from the Base class.
      Attributes:
