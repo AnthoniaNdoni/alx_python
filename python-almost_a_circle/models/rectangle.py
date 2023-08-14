@@ -2,7 +2,15 @@
 """
 module documentation
 """
-from models.base import Base
+class Base:
+    __nb_objects = 0
+
+def __init__(self, id=None):
+    if id is not None:
+        self.id = id
+    else:
+        Base.__nb_objects += 1
+        self.id = Base.__nb_objects    
     
 class Rectangle(Base): 
     """
@@ -175,7 +183,7 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value  
-                      
+
                      
 
             if args_length > 0:
