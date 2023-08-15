@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-"""
-Defines a class Rectangle that inherits from BaseGeometry.
-"""
 class Rectangle(BaseGeometry):
     """
     Represents a rectangle, inheriting from BaseGeometry.
