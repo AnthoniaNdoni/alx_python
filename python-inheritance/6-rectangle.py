@@ -5,7 +5,7 @@
     """
 class Rectangle(BaseGeometry):
     """
-    class Rectangle(BaseGeometry):
+   `Am empty class representing Rectangle
     Initializes a new Rectangle instance with the specified width and height.
 
     Args:
