@@ -6,7 +6,7 @@ Initializes a new Rectangle instance with the specified width and height.
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
-"""
+    """
     Represents a rectangle, inheriting from BaseGeometry
     Initializes a new Rectangle instance with the specified width and height.
 
