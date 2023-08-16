@@ -17,6 +17,11 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """
         Class constructor.
+        ... (rest of the __init__ method) ...
+
+    ... (other methods) ...
+
+    def update(self, *args, **kwargs)
 
         Args:
             size (int): The size of the square (same as width and height).
