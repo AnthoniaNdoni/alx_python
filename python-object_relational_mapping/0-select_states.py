@@ -16,8 +16,8 @@ try:
         rows= cursor.fetchall()
         for state in rows:
             print(state)
-
         cursor.close()
+
         database.close()
     else:
         None
