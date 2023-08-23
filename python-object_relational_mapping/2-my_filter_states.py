@@ -13,7 +13,7 @@ try:
         database = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
         cursor =database.cursor()
         state_name = sys.argv[4]
-        cursor.execute("SELECT * FROM states WHERE BINARY name = %s"
+        cursor.execute("SELECT * FROM states WHERE BINARY name = %s "
                        "ORDER BY id ASC", (state_name,))
         
         rows= cursor.fetchall()
@@ -24,4 +24,4 @@ try:
     else:
         None
 except MySQLdb.OperationalError as e:
-    print("connection failed:",e)
+    print("connection failed. {}".format(e))
