@@ -7,13 +7,14 @@ import sys
 import MySQLdb
 
 try:
-    if len(sys.argv)> 3:
+    if len(sys.argv) > 3:
         database = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
         cursor =database.cursor()
         cursor.execute("SELECT * FROM states") 
         rows= cursor.fetchall()
         for state in rows:
             print(state)
+
         database.close()
     else:
         None
