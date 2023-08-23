@@ -7,16 +7,17 @@ import sys
 import MySQLdb
 
 try:
-    if len(sys.argv)> 4:
+    if len(sys.argv) > 4:
         database = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
         cursor =database.cursor()
         state_name = sys.argv[4]
-        cursor.execute("SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC", (state_name,))
-
+        cursor.execute("SELECT * FROM states WHERE BINARY name = %s"
+                       "ORDER BY id ASC", (state_name,))
+        
         rows= cursor.fetchall()
         for state in rows:
             print(state)
-
+            
         database.close()
     else:
         None
