@@ -1,5 +1,7 @@
 """
 A script that lists all cities from the database hbtn_0e_4_usa
+A Script that use inner Join to querry data from multiple table
+the  database is passed from the terminal.
 """
 
 # import dbobject
@@ -15,7 +17,7 @@ try:
                                    passwd=f"{sys.argv[2]}",
                                    db=f"{sys.argv[3]}")
 
-        # set cursor if connection succed
+        # set cursor if connection succeed
         cursor = database.cursor()
 
         # run the select statement on the cities table
@@ -34,7 +36,7 @@ try:
         pass
 
     database.close()
-    # if there is an error catch it with and exception message
+    # if there is an error catch it with exception message
 except MySQLdb.OperationalError as e:
 
     # print the error message
