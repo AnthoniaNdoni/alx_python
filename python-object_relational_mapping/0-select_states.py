@@ -13,9 +13,9 @@ try:
     # connect to the database
     if len(sys.argv) > 3:
         database = MySQLdb.connect(user=f"{sys.argv[1]}",
-                                    passwd=f"{sys.argv[2]}", 
-                                    db=f"{sys.argv[3]}")
-        
+                                   passwd=f"{sys.argv[2]}",
+                                   db=f"{sys.argv[3]}")
+
         # set cursor if connection succed
         cursor = database.cursor()
 
