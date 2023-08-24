@@ -17,13 +17,13 @@ try:
                                     db=f"{sys.argv[3]}")
         
         # set cursor if connection succed
-        cursor =database.cursor()
+        cursor = database.cursor()
 
         # Corrected line length and added spaces around operators
         cursor.execute("SELECT * FROM states ORDER by states.id")
 
         # fetch all rows in the result
-        rows= cursor.fetchall()
+        rows = cursor.fetchall()
 
         # loop through the result to get the state id and name
         for row in rows:
