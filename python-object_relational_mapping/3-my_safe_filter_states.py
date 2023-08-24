@@ -33,7 +33,7 @@ try:
             # print only the capital letter not the small letter
             # print(row) if row[1][0] == 'N' else None
             print(row)
-            
+
         database.close()
     else:
         pass
@@ -42,4 +42,4 @@ try:
 except MySQLdb.OperationalError as e:
 
     # print the error message
-    print("Connection failed. {}".format(e))
+            print("Connection failed. {}".format(e))
