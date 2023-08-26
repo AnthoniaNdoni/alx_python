@@ -41,4 +41,3 @@ except MySQLdb.OperationalError as e:
 
     # print the error message
     print("Connection failed. {}".format(e))
-    

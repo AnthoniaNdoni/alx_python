@@ -40,7 +40,7 @@ try:
     else:
         pass
 
-    # if there is an error catch it with exception message
+# if there is an error catch it with exception message
 except MySQLdb.OperationalError as e:
 
     # print the error message
