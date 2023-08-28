@@ -5,8 +5,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 # Create an engine to connect to the MySQL server
-# Replace "mysql+mysqldb://root:root@localhost/food_db" with your connection URL
-# The URL format is "mysql+mysqldb://username:password@host/database_name"
 # Connecting to MySQL server at 23.92.23.113 using mysql-python DBAPI 
 engine = create_engine("mysql+mysqldb://root:root@localhost/food_db")
 
