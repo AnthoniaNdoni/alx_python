@@ -3,15 +3,16 @@ Write a python file that contains the class definition of
 a State and an instance Base = declarative_base()
 """
 # Import necessary SQLAIchemy components
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column, Integer, String
+import sqlalchemy
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+
 
 # define Base class for table class inheritance
 Base = declarative_base()
 
 # creat s table for class state
-class state(Base):
+class State(Base):
     """
     class definition for sql table states
     PARAMETER
@@ -25,4 +26,3 @@ class state(Base):
     id = Column(Integer, primary_key=True,
                 autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-
