@@ -1,6 +1,5 @@
 """
-Write a script that starts a 
-Flask web application: The application
+Write a script that starts a Flask web application that 
 must run on port the default port 
 and must run on 0.0.0.0
 """
