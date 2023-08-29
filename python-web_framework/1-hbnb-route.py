@@ -1,19 +1,20 @@
 """
-Write a script that starts a Flask web application that 
-must run on port the default port 
-and must run on 0.0.0.0
-"""
-# import flask module
-from flask import Flask
+Write a script that starts a Flask web application:
 
+Your web application must be listening on 0.0.0.0, port 5000
+Routes:
+/: display “Hello HBNB!”
+You must use the option strict_slashes=False in your route definition
+"""
+from flask import Flask
 
 # define a flask instance
 app = Flask(__name__)
 # set strict_s;ashes flag to false
 
-# create a route for index
+# create route for index
 @app.route('/')
-# a function for
+# a function for 
 def hello():
     """
     a function definition that return
