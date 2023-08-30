@@ -6,7 +6,7 @@ and must run on 0.0.0.0
 """
 # import flask module
 from glob import escape
-from flask import Flask
+from flask import Flask, render_template
 
 
 # define a flask instance
