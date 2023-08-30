@@ -97,7 +97,7 @@ def even_or_odd(n):
         msg = 'even'
     else:
         msg ='odd'
-    return render_template('6-number_odd_or_even.html', n=n)
+    return render_template('6-number_odd_or_even.html', n=n, msg=msg)
 
 if __name__=='__main__':
     # for every route
