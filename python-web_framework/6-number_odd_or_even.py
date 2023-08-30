@@ -96,7 +96,7 @@ def even_or_odd(n):
     if n%2 == 0:
         msg = 'even'
     else:
-        msg 'odd'
+        msg ='odd'
     return render_template('6-number_odd_or_even.html', n=n)
 
 if __name__=='__main__':
