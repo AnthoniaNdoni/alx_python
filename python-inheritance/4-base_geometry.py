@@ -1,18 +1,12 @@
 #!/usr/bin/python3
 """
-    class BaseGeometry:
-    An empty class representing BaseGeometry.
-     Raises an Exception with the message area() is not implemented.
 
-    Args:
-    self: The object itself.
+    The module of a class name Geometry that has a single function
     """
 class BaseGeometry:
     """
-    An empty class representing BaseGeometry.
-    Raises an Exception with the message area() is not implemented.
-    Args:
-    self: The object itself.
+   his method check if a class is an instance of the define object
+    exam 1 is an instancce of the class int
     """
 
 def area(self):
