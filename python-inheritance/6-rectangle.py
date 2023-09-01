@@ -1,31 +1,27 @@
-#!/usr/bin/python3
 """
-    class Rectangle(BaseGeometry):
-    this module Defines a class Rectangle that inherits from BaseGeometry
-    """
-class Rectangle(BaseGeometry):
-    """
-   `Am empty class representing Rectangle
-    Initializes a new Rectangle instance with the specified width and height.
+Write a class Rectangle that inherits from BaseGeometry (5-base_geometry.py).
+"""
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
-    Args:
-    width (int): The width of the rectangle.
-    height (int): The height of the rectangle.
-
-    Returns:None
+class BaseGeometryMetaClass(type):
     """
+    A metaclass for BAse geometry
+    """
+    def __dir__(cls)->None:
+        """
+        A function define to remove the __init_subclass__ from dir
+        """
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
 
-def __init__(self, width, height):
+class Rectangle(BaseGeometry, metaclass=BaseGeometryMetaClass):
+    """
+    Write a class Rectangle that inherits from BaseGeometry (5-base_geometry.py).
     """
     def __init__(self, width, height):
-    initializes a function that inherits a class properties
-    Args:
-    width (int): The width of the rectangle.
-    height (int): The height of the rectangle.
-
-    Returns:None
-    """
-    self.integer_validator("width", width)
-    self.integer_validator("height", height)
-    self.__width = width
-    self.__height = height 
+        """
+        initialaizatio function for base geometry
+        """
+        width = BaseGeometry.integer_validator(self, "width", width)
+        height = BaseGeometry.integer_validator(self, "height", height)
+        self.__width = width
+        self.__height = height
