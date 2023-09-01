@@ -9,8 +9,6 @@ class BaseGeometry:
     exam 1 is an instancce of the class int
     """
 
-def area(self):
-
     def __dir__(cls) -> None:
         """
         The function overide the default __dir__ function    
