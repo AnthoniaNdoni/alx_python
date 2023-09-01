@@ -1,26 +1,32 @@
 #!/usr/bin/python3
 """
-module documentation: 
+This is that implement the base required for other class in python.
 """
 
 class Base:
     """
-    Base class for managing the id attribute in all future classes.
-    Attributes:
-        __nb_object (int): A private class attribute that keeps track of the number of instances created.
-        id (int): A public instance attribute representing the unique identifier of an instance.
+    A bass class for python just a circle.
+    the goal of the base class will be to manage
+    your id in all your projects.
     """
+    # create a class attribute to hold the count
     __nb_objects = 0
 
-    def __init__(self, id=None):
+    def __init__(self, id:int = None):
         """
-        class constructor.
+        Funtion instantiation for base clss
 
-        Args:
-        id (int, optional): The id for the instance.Defaults to None.
+            Parameters:
+                id: integer, default value = None
+
+            Returns:
+                increment self.id if id is none otherwise self id = id
         """
-        if id is not None:
+
+        # increament count anytime the instance is created
+        Base.__nb_objects += 1
+
+        if id != None:
             self.id = id
         else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects 
+           self.id = Base.__nb_objects
