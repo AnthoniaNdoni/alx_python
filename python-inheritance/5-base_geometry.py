@@ -8,33 +8,24 @@ class BaseGeometry:
     """
     An empty class representing BaseGeometry.
     """
-
-    def area(self):
+def __dir__(cls) -> None:
         """
-        Raises an Exception with the message area() is not implemented.
-
-        Args:
-            self: The object itself.
-
-        Returns:
-            None (Raises an Exception).
+        this method check if a class is an instance of the define object
+            exam 1 is an instancce of the class int
         """
+        attrib = super().__dir__()
+        n_attri = []
+        for attr in attrib:
+            if attr != '__init_subclass__':
+                n_attri.append(attr)
+        return n_attri
+
+def area(self):
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name, value):
-        """
-        Validates the value as an integer.
-
-        Args:
-            self: The object itself.
-            name (str): The name of the value.
-            value: The value to be validated.
-
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is less than or equal to 0.
-        """
-        if not isinstance(value, int):
+def integer_validator(self, name:str, value:int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
+        elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+
