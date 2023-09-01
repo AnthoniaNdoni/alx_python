@@ -1,36 +1,38 @@
 #!/usr/bin/python3
 """
-    Rectangle that inherits from BaseGeometry (5-base_geometry.py)
+Write a class Rectangle that inherits from BaseGeometry (5-base_geometry.py).
+"""
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
+class BaseGeometryMetaClass(type):
     """
-class Rectangle(BaseGeometry):
+    A metaclass for BAse geometry
     """
-    Represents a rectangle, inheriting from BaseGeometry.
+    def __dir__(cls)->None:
+        """
+        A function define to remove the __init_subclass__ from dir
+        """
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+class Rectangle(BaseGeometry, metaclass=BaseGeometryMetaClass):
     """
-def __init__(self, width, height):
+    Write a class Rectangle that inherits from BaseGeometry (5-base_geometry.py).
     """
-    Initializes a new Rectangle instance with the specified width and height.
-
-    Args:
-    width (int): The width of the rectangle.
-    height (int): The height of the rectangle.
-    """
-    self.integer_validator("width", width)
-    self.integer_validator("height", height)
-    self.__width = width
-    self.__height = height
-
-def area(self):
-    """
-    Calculates and returns the area of the rectangle.
-
-    Returns: The area of the rectangle.
-    """
-    return self.__width * self.__height
-
+    def __init__(self, width, height):
+        """
+        initialaizatio function for base geometry
+        """
+        BaseGeometry.integer_validator(self, "width", width)
+        BaseGeometry.integer_validator(self, "height", height)
+        self.__width = width
+        self.__height = height
+    
     def __str__(self):
         """
-        Returns a string representation of the rectangle.
-
-        Returns:A string in the format [Rectangle] <width>/<height>
+        THIS mETHOD CONVERT THE OBJECT TO A READABLE STRING
         """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+    def area(self):
+        """
+        This method return the result of width * height
+        """
+        return self.__width*self.__height
