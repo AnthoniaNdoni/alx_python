@@ -1,26 +1,42 @@
 '''
-modlue that use PAT to access the Git hub api
+This is a python script that takse URL and send a request to the URL
 '''
-
 import sys
 import requests
 
 
-username = str(sys.argv[1])
-token = str(sys.argv[2])
+'''
+request Url and return the headers X_request-id
+'''
+url = "http://0.0.0.0:5000/search_user"
 
+try:
+    if (sys.argv[1]):
+        post_data ={'q':sys.argv[1]}
+    else: 
+        post_data = {'q':''}
 
-url = f'https://api.github.com/users/{username}'
+    req = requests.post(url, data=post_data)
+    if req.status_code == 200:
+        
+        data = '{}'.format(req.text)
 
-headers = {
-    'Authorization' : f'Token {token}'
-}
+        # Remove curly braces and split the string
+        pairs = data[1:-2].split(',')
 
-response = requests.get(url, headers=headers)
+        # Create a dictionary from the key-value pairs
+        result = {}
+        for pair in pairs:
+            key, value = pair.split(':')
+            result[key.strip('"')] = value.strip('"')
+        
+        
+        print(f"[{result['id']}] {result['name']}")
 
-if response.status_code == 200:
-    user_data = response.json()
-    user_id = user_data['id']
-    print(f"{user_id}")
-else:
-    print(None)
+    else:
+        print("No result")
+        
+except IndexError:
+    print("No result")
+except ValueError:
+    print("Not a  valid JSON")
