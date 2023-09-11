@@ -39,4 +39,4 @@ try:
 except IndexError:
     print("No result")
 except ValueError:
-    print("Not a  valid JSON")
+    print("Not a valid JSON")
