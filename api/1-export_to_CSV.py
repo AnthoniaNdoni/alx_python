@@ -14,7 +14,7 @@ results = json.loads(req.text)
 task = 0
 completed_task_title = []
 
-with open('USER_ID.csv', 'w', newline='') as file:
+with open(f"{sys.argv[1]}.csv", 'w', newline='') as file:
     writer = csv.writer(file)
     for result in results:
         users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(result['userId']))
