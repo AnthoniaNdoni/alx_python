@@ -1,10 +1,10 @@
 '''
 DOc strings
 '''
-import sys
-import requests
-import json
 import csv
+import json
+import requests
+import sys
 
 todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
 
