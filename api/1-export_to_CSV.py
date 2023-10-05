@@ -1,23 +1,22 @@
 '''
-DOc strings
+This module export content from an api into a csv file define on creation
+return : csv
 '''
 import csv
-import json
 import requests
 import sys
 
-todo_url = f'https://jsonplaceholder.typicode.com/users/{sys.argv[1]}/todos'
+user_id = str(sys.argv[1])
 
-req = requests.get(todo_url) 
-results = json.loads(req.text)
+user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+todo_url = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(user_id)
 
-task = 0
-completed_task_title = []
+user_data = requests.get(user_url).json()
+todo_data = requests.get(todo_url).json()
 
-with open(f"{sys.argv[1]}.csv", 'w', newline='') as file:
-    writer = csv.writer(file)
-    for result in results:
-        users = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(result['userId']))
-        user = json.loads(users.text)
+filename = "{}.csv".format(user_id)
 
-        writer.writerow([result['userId'], user['username'], result['completed'], result['title']])
+with open(filename, 'w', newline='') as file:
+    writter = csv.writer(file, quoting = csv.QUOTE_ALL)
+    for task in todo_data:
+        writter.writerow([user_id, str(user_data['username']),task['completed'], task['title']])
