@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
-def fibonacci_sequence(n):
-    sequence = [0, 1]
-    if n <= 0:
-        sequence = []
-    if n == 1:
-        sequence = [0]
-    else:
-        sequence = [0, 1]
-    while len(sequence) < n:
-        sequence.append(sequence[-1] + sequence[-2])
-        return sequence
-    
+# fibonacci sequence
 
-    print(fibonacci_sequence(6))
-    print(fibonacci_sequence(1))
+
+def fibonacci_sequence1(n):
+    a,b = 0,1
+    while (b<n):
+        print(b, end=', ')
+        a,b=b, a+b
+
+# fib2(20)
+
+def fibonacci_sequence(n):
+    a = []
+    if(n>=1):
+        a.append(0)
+    if(n>1):
+        a.append(1)  
+    for i in range(2, n):
+        a.append(a[i-1] + a[i-2])
+    return a
